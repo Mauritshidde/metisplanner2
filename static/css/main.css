@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  font-family: 'Lato', sans-serif !important;
+}
+.toets {
+  border: 1px solid black;
+  background-color: #f0fc03;
+}
+body {
+  background-color: white;
+  color: black;
+  margin: 0px;
+}
+.disable {
+  display: none;
+}
+.enable {
+  display: contents;
+}
+.button {
+  background-color: white;
+}
+.False {
+  background-color: white;
+}
+.True {
+  background-color: yellow;
+}
+.input{
+  width: 100%;
+  border: 3px solid black;
+}
+.klas{
+  text-align: center;
+}
+.vak{
+  text-align: center;
+}
+.zijkant {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+}
+table{
+  text-align: center;
+  border: 4px solid black;
+  border-collapse: collapse;
+  background-color: white;
+  margin: auto;
+  font-family: cursive;
+  max-width: 75%;
+  min-width: 60%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.weekform {
+  margin-top: 15px;
+}
+.week_button {
+  color: black;
+}
+/*p{
+  flex: auto;
+  display: flex;
+  justify-content: center;
+}
+*/
+.weekbalk {
+
+}
+.weekbalk {
+  height: 100px;
+  background-color: #F44336;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  color: white;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  padding: 5px;
+  padding-top: 30px;
+}
+.form div {
+}
+.thVakken {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid     black;
+  background-color: white ;
+  margin: auto;
+}
+th {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid     black;
+  background-color: white ;
+  margin: auto;
+}
+legend {
+  text-align: center;
+}
+td {
+  border: 1px solid black;
+}
+.inweek {
+  border-color: red;
+}
+.invoer {
+  text-align: center;
+}
+.vakken_select {
+  background-color: white;
+  border: 1px solid black;
+}
+p {
+  font-size: 10px;
+  /* max-width: 120px;
+  min-width: 80px; */
+}
+.datum {
+  text-align: center;
+}
+.vorige_week {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.volgende_week {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.save_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_align {
+  display: flex;
+  flex-direction: column
+}
+legend {
+  padding-top: 30px;
+}
+.vakken {
+  margin-left: 49%;
+}
+
+.overflow-button {
+}
+
+.mdl-menu__container {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    overflow: visible;
+}
+.menu_link div {
+  border: 1px solid black;
+  background-color: white;
+}
+.top-balk {
+  /* background-color: #F44336;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0.5px 1.5px rgb(0 0 0 / 6%), 0 0.5px 1px rgb(0 0 0 / 12%); */
+}
+.bottom-balk {
+  display: flex;
+  justify-content: center;
+}
+
+.vorige_week {
+
+}
+
+.vorige_button {
+  background-color: #F44336;
+  border: none;
+}
+.volgende_button {
+  background-color: #F44336;
+  border: none;
+}
+.submit_input {
+  background-color: white;
+  border: 2px solid black;
+  /* transition-duration: 0.1s; */
+  border-radius: 10px;;
+  padding: 10px;
+  margin: 5px;
+}
+
+.submit_input:hover {
+  background-color: #F44336; /* Green */
+  color: white;
+  padding: 12px;
+  border: none;
+}
+
+.extra_functions {
+
+}
+
+.extra_functions_button {
+  padding: 2px 4px 0px 4px;
+  background-color: #F44336;
+  border: none;
+  z-index: 1;
+}
+.extra_functions_menu {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.ext_menu_list {
+  text-align: center;
+  background-color: white;
+  padding: 0px;
+  border: none;
+}
+
+.geen_streep {
+  text-decoration: none;
+}
+
+.mdl-menu__item {
+  display: block;
+  border: none;
+  color: rgba(0,0,0,.87);
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+  outline-color: #bdbdbd;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.mdl-menu__item:hover {
+    background-color: rgba(0,0,0,0.35);
+}
+
+.gemaakt_door {
+  display: block;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.35);
+  color: grey;
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+  outline-color: #bdbdbd;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  white-space: nowrap;
+  cursor: default;
+}

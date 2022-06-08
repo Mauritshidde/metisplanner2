@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Metis Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+  </head>
+  <body>
+    <div class="weekbalk">
+      <legend>{{klas}}</legend>
+      <legend>Selecteer hier onder de vakken die je hebt of kies een ander leerjaar.</legend>
+    </div>
+    <div class="zijkant">
+      <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <div>
+          <div class="klas">
+            {{ form.klas.label }}
+            {{ form.klas }}
+          </div>
+        </div>
+        <div class="invoer">
+          <input class="submit_input" onclick="removeDisable()"type="submit" name="submit_button" value="Bevestig klas">
+        </div>
+
+      <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <div class="">
+          {% for vak in vakken %}
+            <div class="vakken">
+              <input class="" type=checkbox name=vakken_kiezen value={{vak}}> {{vak}} <br/>
+            </div>
+          {% endfor %}
+        </div>
+        <div id="klassen_button" class="invoer">
+          <input type="submit" class="submit_input" name="submit_button" value="Bevestig keuze">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

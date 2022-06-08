@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <title>Metis Planner</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function toggle() {
+      var element = document.getElementById("menu");
+      element.classList.toggle("disable");
+    }
+    </script>
+    <div class="voor_weekbalk">
+      <div class="weekbalk">
+        <form method="post" action="">
+          <div class="button_align">
+            <div class="form">
+              <div class="vorige_week">
+                <button class="vorige_button" type="submit" name="vorige" value="vorige">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 1>
+                </button>
+              </div>
+              <div class="klas">
+                {{ klas }}
+              </div>
+              <div class="volgende_week">
+                <button class="volgende_button" type="submit" name="volgende" value="volgende">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4>
+                </button>
+              </div>
+              <button onclick="toggle()" class="extra_functions_button" type="button" name="button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1>
+              </button>
+              <div id="menu" class="disable">
+                <div class="extra_functions_menu">
+                  <ul class="ext_menu_list">
+                    <a class="geen_streep" href="https://rooster.hetmml.nl/">
+                      <li class="mdl-menu__item">
+                        Metis rooster
+                      </li>
+                    </a>
+                    <a class="geen_streep" href="invullen">
+                      <li class="mdl-menu__item">
+                        opnieuw invullen
+                      </li>
+                    </a>
+                    <li class="gemaakt_door">
+                      Gemaakt door Maurits Diepeveen
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="save_button">
+                {{ form2.save }}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="">
+        {% for keer in range(3) %}
+          <h4 class="datum">{{datums[keer][0]}}</h4>
+          {% if belangrijk[keer] != "niks" %}
+              <h4 class="datum">{{belangrijk[keer]}}</h4>
+          {% endif %}
+          <table>
+            <tr>
+              <th>Week {{weken[keer]}}</th>
+              {% for vak in vakken %}
+                  <th class="thVakken">{{ vak }}</th>
+              {% endfor %}
+            </tr>
+            <tr>
+              <th>Onderwerp</th>
+              {% for vak in vakken %}
+                  {% if onderwerp[vak][keer] == "niks" %}
+                      <td><p> ----- </p></td>
+                  {% else %}
+                      <td><p>{{ onderwerp[vak][keer] }}</p></td>
+                  {% endif %}
+              {% endfor %}
+            </tr>
+            <tr>
+              <th>Weekopdracht</th>
+              {% for vak in vakken %}
+                  {% if weekopdracht[vak][keer] == "niks" %}
+                      <td><p> ----- </p></td>
+                  {% else %}
+                      <td><p>{{ weekopdracht[vak][keer] }}</p></td>
+                  {% endif %}
+              {% endfor %}
+            </tr>
+            <tr>
+              <th>Toets / deadline</th>
+              {% for vak in vakken %}
+                  {% if toets_deadline[vak][keer] == "niks" %}
+                      <td><p> ----- </p></td>
+                  {% else %}
+                      <td class="toets"><p>{{ toets_deadline[vak][keer] }}</p></td>
+                  {% endif %}
+              {% endfor %}
+            </tr>
+          </table>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
