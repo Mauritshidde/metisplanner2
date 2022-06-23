@@ -10,13 +10,8 @@ from sharepoint import SharePointSite, basic_auth_opener
 from functies2 import *
 import mysql.connector as mysql
 
-HOST = "localhost"
-DATABASE = "planner"
-USER = "test"
-PASSWORD = "maurits"
-
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'd1ccabe4c9d3d5813ba8881bd1082fef'
+
 app.permanent_session_lifetime = datetime.timedelta(days=31)
 pd.options.mode.chained_assignment = None
 
